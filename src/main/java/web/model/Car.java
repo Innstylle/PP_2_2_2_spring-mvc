@@ -15,8 +15,7 @@ public class Car {
         this.countryProd = countryProd;
     }
 
-    public Car() {
-    }
+
 
     public String getModel() {
         return model;
