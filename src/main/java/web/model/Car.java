@@ -2,11 +2,11 @@ package web.model;
 
 
 public class Car {
-    private int productionYear;
+    private final int productionYear;
 
-    private String countryProd;
+    private final String countryProd;
 
-    private String model;
+    private final String model;
 
 
     public Car(String model, int productionYear, String countryProd) {
