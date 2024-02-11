@@ -1,33 +1,7 @@
 package web.model;
 
 
-public class Car {
-    private final int productionYear;
-
-    private final String countryProd;
-
-    private final String model;
-
-
-    public Car(String model, int productionYear, String countryProd) {
-        this.model = model;
-        this.productionYear = productionYear;
-        this.countryProd = countryProd;
-    }
-
-
-
-    public String getModel() {
-        return model;
-    }
-
-    public int getProductionYear() {
-        return productionYear;
-    }
-
-    public String getCountryProd() {
-        return countryProd;
-    }
+public record Car(String model, int productionYear, String countryProd) {
 
     @Override
     public String toString() {
