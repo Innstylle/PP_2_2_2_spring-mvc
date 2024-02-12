@@ -5,6 +5,7 @@ import web.model.Car;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class CarServiceIml implements CarService{
@@ -17,10 +18,8 @@ public class CarServiceIml implements CarService{
         carList.add(new Car("Lada", 2020, "Russia"));
         carList.add(new Car("BMW", 1998, "German"));
 
-        if (count < 0 || count >= carList.size()) {
-            return carList;
-        }else {
-            return carList.subList(0, count);
-        }
+        return count < 0 || count >= carList.size() ?
+                carList :
+                carList.stream().limit(count).collect(Collectors.toList());
     }
 }
