@@ -18,7 +18,7 @@ public class CarServiceIml implements CarService{
         carList.add(new Car("Lada", 2020, "Russia"));
         carList.add(new Car("BMW", 1998, "German"));
 
-        return count < 0 || count >= carList.size() ?
+        return count < 0 ?
                 carList :
                 carList.stream().limit(count).collect(Collectors.toList());
     }
